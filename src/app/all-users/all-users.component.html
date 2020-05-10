@@ -1,0 +1,13 @@
+
+<ion-card *ngFor="let user of users">
+  <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+  <ion-card-header>
+    <ion-card-subtitle>{{user.name}}</ion-card-subtitle>
+    <ion-card-title>{{user.surname}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div>{{user.email}}</div>
+    <div>{{user.address | json}}</div>
+  </ion-card-content>
+  <ion-button size="small" color="secondary">Show posts</ion-button>
+</ion-card>
