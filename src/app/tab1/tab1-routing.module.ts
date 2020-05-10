@@ -6,7 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-  }
+  },
+  {path: 'users',
+    redirectTo: '/tabs/tab2',
+    pathMatch: 'full'}
 ];
 
 @NgModule({

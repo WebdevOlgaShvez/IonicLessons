@@ -7,6 +7,9 @@ import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
+import {HttpClientModule} from "@angular/common/http";
+import {UserService} from "../all-users/user.service";
+import {AllUsersComponent} from "../all-users/all-users.component";
 
 @NgModule({
   imports: [
@@ -14,8 +17,10 @@ import { Tab2PageRoutingModule } from './tab2-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,
+      HttpClientModule
   ],
-  declarations: [Tab2Page]
+  declarations: [Tab2Page, AllUsersComponent],
+  providers: [UserService]
 })
 export class Tab2PageModule {}
